@@ -16,7 +16,9 @@ df %>%
   filter(Location == city) %>%
   ggplot(aes(x = Temp9am, y = Humidity9am)) + 
   geom_point() +
-  labs(caption = 'weather')
+  labs(caption = 'weather',
+       x = 'temperature', y = 'humidity') +
+  facet_wrap(~WindDir9am)
 
 # Save the plot in graphics/
 ggsave(filename = "graphics/scatter-temp-humidity.png", plot = scatter_plot)
