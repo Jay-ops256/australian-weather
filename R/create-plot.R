@@ -17,7 +17,7 @@ df %>%
   ggplot(aes(x = Temp9am, y = Humidity9am)) + 
   geom_point() +
   labs(caption = 'weather',
-       x = 'temperature', y = 'humidity') +
+       x = 'temperature, celcius', y = 'humidity') +
   facet_wrap(~WindDir9am)
 
 # Save the plot in graphics/
